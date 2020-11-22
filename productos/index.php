@@ -14,7 +14,7 @@
 
 <body>
     <div class="container-fluid">
-        <h1>Tienda</h1>
+        <h1>TIENDA</h1>
         <a href="../index.php">Regresar</a>
         <a href="insert.php">Insert</a>
         
