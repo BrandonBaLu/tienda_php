@@ -1,43 +1,27 @@
-<?php
+<!doctype html>
+<html lang="en">
 
-    $id_producto = $_GET["id_producto"];
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    $db = new SQLite3("tienda.db");
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    $resultado = $db->query("SELECT * from producto where id_producto='$id_producto';");
+    <title>Tienda</title>
+</head>
 
-    while ($row = $resultado->fetchArray()) {
-        $id_producto = $row["id_producto"];
-        $nombre = $row["nombre"];
-        $precio_venta = $row["precio_venta"];
-        $existencias = $row["existencias"];
-        $descripcion = $row["descripcion"];
-    }
+<body>
+    <div class="container-fluid">
+        <h1>View</h1>
+        <a href="index.php">Lista de personas</a>
 
-    $form ="<form action='db/update.php' method='GET'>
-            <div class='form-group'>
-                <label for='id_producto'>ID</label>
-                <input type='text' readonly class='form-control' id='id_producto' name='id_producto aria-describedby='Id producto' value='$id_producto'>
-            </div>
-            <div class='form-group'>
-                <label for='nombre'>Nombre</label>
-                <input type='text' class='form-control' id='nombre' name='nombre' aria-describedby='nombre' value='$nombre'>
-            </div>
-            <div class='form-group'>
-                <label for='nombre'>Precio</label>
-                <input type='text' class='form-control' id='precio_venta' name='precio_venta' aria-describedby='precio_venta' value='$precio_venta'>
-            </div>
-            <div class='form-group'>
-                <label for='stock'>Productos en existenc</label>
-                <input type='text' class='form-control' id='stock' name='stock' aria-describedby='stock' value='$existencias'>
-            </div>
-            <div class='form-group'>
-                <label for='descripcion'>Descripcion del producto</label>
-                <input type='text' class='form-control' id='descripcion' name='descripcion' aria-describedby='descripcion' value='$descripcion'>
-            </div>
-            <button type='submit' class='btn btn-primary'>Submit</button>
-        </form>";
+        <form>
+            <?php include 'db/db_view.php'; ?>
+        </form>
 
-    print($form);
+    </div>
+</body>
 
-?> 
+</html>
