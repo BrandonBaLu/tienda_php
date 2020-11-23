@@ -16,10 +16,11 @@ INSERT INTO producto(nombre, precio_venta, existencias, descripcion) values("Agu
 INSERT INTO producto(nombre, precio_venta, existencias, descripcion) values("Fabuloso", "18", "20","Producto liquido de 1l.");
 
 create table ticket(
-       idventa integer  not null primary key AUTOINCREMENT,
-       num_comprobante varchar (250) not null ,
+       id_venta integer  not null primary key AUTOINCREMENT,
        fecha_hora datetime not null,
-       total decimal (11,2) not null,
+       cantidad_producto varchar (25) not null ,
+       producto varchar (300) not null ,
+       total_producto  decimal (11,2) not null,
        id_producto int not null,
        FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
