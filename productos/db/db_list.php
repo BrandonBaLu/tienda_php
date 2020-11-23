@@ -31,7 +31,7 @@
 
         $table = "
             <tr>
-                <td>$id_persona</td>
+                <td>$id_producto</td>
                 <td>$nombre</td>
                 <td>$precio_venta</td>
                 <td>$existencias</td>
