@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 
+<!doctype html>
+<html lang="es">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

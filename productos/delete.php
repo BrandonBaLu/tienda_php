@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -15,7 +15,7 @@
 <body>
     <div class="container-fluid">
         <h1>Delete</h1>
-        <a href="index.php">Lista de productos</a>
+        <a href="index.php">Lista productos</a>
 
         <form action='db/db_delete.php' method='GET'>
             <?php include 'db/db_view.php'; ?>

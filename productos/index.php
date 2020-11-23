@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -14,10 +14,9 @@
 
 <body>
     <div class="container-fluid">
-        <h1>TIENDA</h1>
+        <h1>Tienda</h1>
         <a href="../index.php">Regresar</a>
-        <a href="insert.php">Insert</a>
-        
+        <a href="insert.php">Insertar productos</a>
         <?php include 'db/db_list.php'; ?>
     </div>
 </body>

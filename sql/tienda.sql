@@ -1,5 +1,5 @@
 create table producto(
-       id_producto integer primary key,
+       id_producto integer  primary key AUTOINCREMENT,
        nombre varchar(100) not null,
        precio_venta decimal(11,2) not null,
        existencias integer not null,
@@ -16,12 +16,10 @@ INSERT INTO producto(nombre, precio_venta, existencias, descripcion) values("Agu
 INSERT INTO producto(nombre, precio_venta, existencias, descripcion) values("Fabuloso", "18", "20","Producto liquido de 1l.");
 
 create table ticket(
-       idventa integer primary key ,
-       tipo_comprobante varchar(20) not null,
-       serie_comprobante varchar(7) null,
-       num_comprobante varchar (10) not null,
+       idventa integer  not null primary key AUTOINCREMENT,
+       num_comprobante varchar (250) not null ,
        fecha_hora datetime not null,
        total decimal (11,2) not null,
-       estado varchar(20) not null
+       id_producto int not null,
+       FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
-
